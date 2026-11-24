@@ -250,3 +250,51 @@ Image:         ghcr.io/elie222/rakazo/app:v0.3.3
 ```
 EOF
 echo "written"; ls -l /home/sam/INSTALL.md
+---
+
+## Connecting from Your Computer
+
+### Cloud Box (web interface)
+
+Open in your browser:
+
+```
+https://box.simular.ai/box/cb-fbad7a7650b1/live
+```
+
+Log in with GitHub or Google to access the XFCE desktop (1280x800).
+
+### Rakazo (Railway public URL)
+
+After deployment, Railway assigns a public domain:
+
+```
+https://<your-project>.railway.app
+```
+
+Verify health:
+
+```bash
+curl -s https://<your-project>.railway.app/health
+```
+
+### Local Services (optional)
+
+If your computer also runs Paperclip or OpenMausBot:
+
+- **Paperclip**: managed CLI at `~/.local/bin/paperclipai`, service `paperclipai.service`, API at `http://127.0.0.1:3100`
+- **OpenMausBot**: MCP server at `http://127.0.0.1:8799`
+
+Refer to `~/.agents/skills/paperclip-launch/SKILL.md` for full setup.
+
+## Quick Links
+
+| Service | URL |
+|---|---|
+| Rakazo (deployed) | `https://<your-project>.railway.app` |
+| Rakazo health | `https://<your-project>.railway.app/health` |
+| Cloud Box | https://box.simular.ai/box/cb-fbad7a7650b1/live |
+| Railway template | https://railway.com/deploy/rakazo |
+| OpenRouter | https://openrouter.ai |
+| Neon (free Postgres) | https://neon.tech |
+| Supabase (free Postgres) | https://supabase.com |
